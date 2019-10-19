@@ -1,7 +1,8 @@
 # MACHINE LEARNING IN PYTHON
+-------------------------------
 
-# Hierarchical Clustering:
-
+## Hierarchical Clustering:
+-------------------------------
 Hierarchical clustering algorithms build a hierarchy of clusters where each node is a cluster consisting of the clusters of its daughter nodes.
 Strategies for hierarchical clustering generally fall into two types: **1. Divisive** and **2. Agglomerative**.
 
@@ -126,7 +127,8 @@ k-Means.
 |k-Means returns different clusters each time it is run due to random initialization of centroids|Hierarchical clustering always generates the same clusters|
     
 
-# DBscan (Density-Based Spatial Clustering of Applications with Noise) Clustering:
+## DBscan (Density-Based Spatial Clustering of Applications with Noise) Clustering:
+------------------------------------------------------------------------------
 
 Most of the traditional clustering techniques, such as k-means, hierarchical, and fuzzy clustering, can be used to group data in an un-supervised way.
 However, when applied to tasks with arbitrary shape clusters, or clusters within clusters,traditional techniques might not be able to achieve good results.
