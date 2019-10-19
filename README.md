@@ -170,3 +170,17 @@ It works based on 2 parameters: Radius(**R**) and Minimum Points(**M**).
  3. DBSCAN makes it very practical for use in many really world problems because it does not require one to specify the number
 of clusters, such as K in k-Means.
 
+## Recommender Systems:
+
+There are generally 2 main types of recommendation systems: Content-based and collaborative filtering.
+
+**Content-based systems** try to figure out what a user's favorite aspects of an item are, and then make recommendations on items that share those aspects.
+
+**Collaborative filtering** techniques find similar groups of users, and provide recommendations based on similar tastes within that group.In short, it assumes that a user might be interested in what similar users are interested in.
+
+Also, there are Hybrid recommender systems,which combine various mechanisms.
+
+In terms of implementing recommender systems, there are 2 types: Memory-based and Model-based.
+
+In **memory-based** approaches, we use the entire user-item dataset to generate a recommendation system. It uses statistical techniques to approximate users or items. Examples of these techniques include: Pearson Correlation, Cosine Similarity and Euclidean Distance, among others.
+In **model-based** approaches, a model of users is developed in an attempt to learn their preferences. Models can be created using Machine Learning techniques like regression, clustering, classification, and so on.
