@@ -67,6 +67,61 @@ For example here, cutting in a specific level of similarity, we create 3 cluster
 
 **ALGORITHM:**
 
+Agglomerative clustering is a bottom-up approach.Let’s say our dataset has n data points. 
+   1. we create n clusters, one for each data point. Then each point is assigned as a cluster.
+   
+   2. we compute the distance/proximity matrix, which will be an n * n table.
+   
+   3. we iteratively run the following steps until the specified cluster number is reached, or until there is only one cluster left.
+   
+     i) MERGE the two nearest clusters. (Distances are computed already in the proximity matrix.
+     
+     ii) UPDATE the proximity matrix with the new values.
+     
+   4. We stop after we’ve reached the specified number of clusters, or there is only one cluster remaining, with the result stored in a dendrogram. So, in the proximity matrix, we have to measure the distances between clusters, and also merge the clusters that are “nearest.”
+   
+So, the key operation is the computation of the proximity between the clusters with one point, and also clusters with multiple data points.
 
+We can use different criteria to find the closest clusters, and merge them.In general, it completely depends on the data type, dimensionality of data, and most importantly,the domain knowledge of the dataset. In fact, different approaches to defining
+the distance between clusters, distinguish the different algorithms.
 
+There are multiple ways we can do this.
+
+   1. **Single-Linkage Clustering**: Single linkage is defined as the shortest distance between 2 points in each cluster
+   
+   2. **Complete-Linkage Clustering**: It is the process of finding the longest distance between points in each cluster
+   
+   3. **Average Linkage Clustering**:This means we’re looking at the average distance of each point from one cluster to
+every point in another cluster
+
+   4. **Centroid Linkage Clustering**: Centroid is the average of the feature sets of points in a cluster. This linkage takes into account the centroid of each cluster when determining the minimum distance.
+  
+  **ADVANTAGES**:
+
+   There are 3 main advantages to using hierarchical clustering:
+   
+1. We do not need to specify the number of clusters required for the algorithm.
+
+2. Hierarchical clustering is easy to implement.
+
+3. The dendrogram produced is very useful in understanding the data.
+
+**DISADVANTAGES:**
+
+There are some disadvantages as well. 
+
+1. The algorithm can never undo any previous steps. So for example, the algorithm clusters 2 points,and later on we see that the connection was not a good one, the program cannot undo that step. 
+
+2. The time complexity for the clustering can result in very long computation times, in comparison with efficient algorithms, such
+k-Means. 
+
+3. If we have a large dataset, it can become difficult to determine the correct number of clusters by the dendrogram.
+
+**DIFFERENCES BETWEEN K-MEANS AND HIERARCHICAL CLUSTERING**:
+
+|**K-Means**|**Hierarchical Clustering**|
+|------|-------------|
+|More efficient for large datasets|Does not require the number of clusters to be specified|
+|k-Means gives only one partitioning of the data|Hierarchical clustering gives more than one partitioning depending on the resolution|
+|k-Means returns different clusters each time it is run due to random initialization of centroids|Hierarchical clustering always generates the same clusters|
     
